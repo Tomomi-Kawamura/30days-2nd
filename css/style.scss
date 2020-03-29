@@ -928,8 +928,9 @@ input[type="submit"]{
     height: auto;
 
     @include sp{
-      height: 97%;
-      top: 0;
+      height: 95vh;
+      top: 5%;
+      padding: 30px 30px 15px;
     }
 
     #btn-batsu{
@@ -940,6 +941,13 @@ input[type="submit"]{
       height: 43px;
       width: 43px;
       cursor: pointer;
+
+      @include sp{
+        top: 0;
+        right: 0;
+        height: 40px;
+        width: 40px;
+      }
     }
     
 
@@ -957,21 +965,53 @@ input[type="submit"]{
           width: 20%;
           min-width: 120px;
           margin: 24.5px auto 0;
+
+          @include sp{
+            margin-top: 20px;
+          }
+        }
+
+        @include sp{
+          margin-bottom: 30px;
+          font-size: 18px;
         }
       }
 
       .privacy-policy-contents{
         margin-bottom: 30px;
         max-width: 790px;
+
         h4{
           font-size: 20px;
           margin-bottom: 18px;
 
+          &::before{
+            position: relative;
+            display: inline-block;
+            border-left: solid 3px #3F51B5;
+            content: "";
+            left: -27.5px;
+            height: 18px;
+
+            @include sp{
+              height: 14px;
+              left: -15px;
+            }
+          }
+
+          @include sp{
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
           
         }
 
         p{
           font-size: 16px;
+        }
+
+        @include sp{
+          font-size: 12px;
         }
       }
 

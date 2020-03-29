@@ -912,8 +912,9 @@ input[type="submit"] {
 
 @media (max-width: 700px) {
   .modal-wrapper .modal {
-    height: 97%;
-    top: 0;
+    height: 95vh;
+    top: 5%;
+    padding: 30px 30px 15px;
   }
 }
 
@@ -925,6 +926,15 @@ input[type="submit"] {
   height: 43px;
   width: 43px;
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .modal-wrapper .modal #btn-batsu {
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .modal-wrapper .modal #privacy-policy h3 {
@@ -942,6 +952,19 @@ input[type="submit"] {
   margin: 24.5px auto 0;
 }
 
+@media (max-width: 700px) {
+  .modal-wrapper .modal #privacy-policy h3::after {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .modal-wrapper .modal #privacy-policy h3 {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+}
+
 .modal-wrapper .modal #privacy-policy .privacy-policy-contents {
   margin-bottom: 30px;
   max-width: 790px;
@@ -952,8 +975,37 @@ input[type="submit"] {
   margin-bottom: 18px;
 }
 
+.modal-wrapper .modal #privacy-policy .privacy-policy-contents h4::before {
+  position: relative;
+  display: inline-block;
+  border-left: solid 3px #3F51B5;
+  content: "";
+  left: -27.5px;
+  height: 18px;
+}
+
+@media (max-width: 700px) {
+  .modal-wrapper .modal #privacy-policy .privacy-policy-contents h4::before {
+    height: 14px;
+    left: -15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .modal-wrapper .modal #privacy-policy .privacy-policy-contents h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
 .modal-wrapper .modal #privacy-policy .privacy-policy-contents p {
   font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .modal-wrapper .modal #privacy-policy .privacy-policy-contents {
+    font-size: 12px;
+  }
 }
 
 .modal-wrapper .modal #privacy-policy #close-btn {
