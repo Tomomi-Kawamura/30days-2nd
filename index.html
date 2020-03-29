@@ -294,13 +294,43 @@
                                 </div>
                             </div>
                             <div class="check">
-                                <input id="check" type="checkbox" value="privacy"><label for="check" class="check-label"><a href="#">プライバシーポリシー</a>に合意する</label>
+                                <input id="check" type="checkbox" value="privacy"><label for="check" class="check-label"><span id="modal-show">プライバシーポリシー</span>に合意する</label>
                             </div>
                             <input type="submit" value="送信する&emsp;&emsp;&gt;">
                         </form>
                     </div>
                 </div>
             </section>
+
+            <!--モーダルの中身-->
+            <div class="modal-wrapper" id="privacy-modal">
+            <div class="modal">
+                <img src="img/btn-batsu.png" id="btn-batsu">
+                <div id="privacy-policy">
+                  <h3>プライバシーポリシー</h3>
+                  <div class="privacy-policy-contents">
+                      <h4>ほにゃらら</h4>
+                      <p>ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら</p>
+                  </div>
+                  <div class="privacy-policy-contents">
+                      <h4>ほにゃらら</h4>
+                      <p>ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら
+                          ほにゃららほにゃららほにゃららほにゃららほにゃらら</p>
+                  </div>
+                  <p id="close-btn">閉じる</p>
+                </div>
+              </div>
+            </div>
+
         </article>
     </main>
     <footer>
@@ -312,11 +342,11 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#" class="active">Card</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Price</a></li>
-                        <li><a href="#">Access</a></li>
-                        <li class="li-last"><a href="#">Contact</a></li>
+                        <li><a href="#card">Card</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#price">Price</a></li>
+                        <li><a href="#access">Access</a></li>
+                        <li class="li-last"><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="appearance-wrapper">
@@ -359,7 +389,7 @@
             $('html,body').animate({
                 'scrollTop':0
             },'slow');
-        })
+        });
 
         $('a[href^="#"]').on("click",function(){
             var speed = 500;
@@ -373,7 +403,19 @@
         $('.nav-item').on('click' , function(){
             $('.active').removeClass('active');
             $(this).addClass('active');
-        })
+        });
+    </script>
+    <!--モーダルの表示-->
+    <script>
+        $('#modal-show').click(function(){
+            $('.modal-wrapper').fadeIn();
+        });
+        $('#close-btn').click(function(){
+            $('.modal-wrapper').fadeOut();
+        });
+        $('#btn-batsu').click(function(){
+            $('.modal-wrapper').fadeOut();
+        });
     </script>
 </body>
 </html>
