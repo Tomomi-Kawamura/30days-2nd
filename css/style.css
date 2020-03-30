@@ -183,14 +183,14 @@ header nav ul li a:hover::after {
   left: 0;
   width: 100%;
   height: 100vh;
-  visibility: hidden;
+  display: none;
   opacity: 0;
   transition: .3s;
   background: #000;
 }
 
 #nav-container:focus-within .bg {
-  visibility: visible;
+  display: block;
   opacity: .6;
 }
 
